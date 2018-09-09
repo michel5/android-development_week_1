@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".HigherLower"
+    tools:showIn="@layout/activity_higher_lower">
+
+    <TextView
+        android:id="@+id/text_high_score"
+        android:layout_width="187dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="181dp"
+        android:layout_marginStart="16dp"
+        android:text="HighScore:"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_score" />
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="364dp"
+        android:layout_height="268dp"
+        android:layout_marginBottom="190dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_high_score" />
+
+    <TextView
+        android:id="@+id/text_score"
+        android:layout_width="103dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="Score:"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="85dp"
+        android:text="lager"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_view" />
+
+    <Button
+        android:id="@+id/button_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="85dp"
+        android:text="hoger"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/list_view" />
+
+    <ImageView
+        android:id="@+id/dobbel_steen_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="26dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginStart="19dp"
+        app:layout_constraintBottom_toTopOf="@+id/won_lose_vieuw"
+        app:layout_constraintEnd_toStartOf="@+id/button_right"
+        app:layout_constraintStart_toEndOf="@+id/button_left"
+        app:srcCompat="@drawable/drie" />
+
+    <TextView
+        android:id="@+id/won_lose_vieuw"
+        android:layout_width="386dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="25dp"
+        android:text=" "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_left"
+        app:layout_constraintVertical_bias="0.0" />
+
+</android.support.constraint.ConstraintLayout>
